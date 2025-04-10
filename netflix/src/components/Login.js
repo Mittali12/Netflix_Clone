@@ -28,7 +28,7 @@ const Login = () => {
             //login
             const user = {email,password}; 
             try {
-                const res = await axios.post(`${API_END_POINT}/login`, user,{
+                const res = await axios.post(`https://netflix-clone-23aa-git-main-mittalis-projects.vercel.app/api/v1/user/login`, user,{
                     headers:{
                         'Content-Type':'application/json'
                     },
@@ -52,7 +52,7 @@ const Login = () => {
             dispatch(setLoading(true));
             const user = {fullName, email, password};
             try {
-                const res = await axios.post(`${API_END_POINT}/register`,user,{
+                const res = await axios.post(`https://netflix-clone-23aa-git-main-mittalis-projects.vercel.app/api/v1/user/register`,user,{
                     headers:{
                         'Content-Type':'application/json'
                     },
