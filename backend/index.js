@@ -24,6 +24,10 @@ const corsOptions = {
     credentials:true
 }
 app.use(cors(corsOptions));
+
+app.get('/',(req, res)=>{
+    res.json('hello');
+})
  
 // api
 app.use("/api/v1/user", userRoute);
